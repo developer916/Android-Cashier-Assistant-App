@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Casher Assistant</string>
+    <string name="iflytek_app_id" translatable="false">5cef8fd3</string>
+    <string name="password_field" translatable="false">security_code</string>
+
+    <string name="cash_assist_title1" translatable="false">Casher Assistant</string>
+    <string name="cash_assist_title2">Pull down to refresh</string>
+    <string name="left_join_merchant">Join a Merchant</string>
+    <string name="left_security_setting">Security Setting</string>
+    <string name="left_security_login">Login</string>
+    <string name="left_footer" translatable="false">Huione Pay @2019</string>
+
+    <string name="default_user_name">Hi ...</string>
+    <string name="tab_all">All</string>
+    <string name="tab_new">New</string>
+    <string name="tab_read">Read</string>
+    <string name="no_message">No Message yet</string>
+
+    <string name="join_merchant_title1">Join a Merchant</string>
+    <string name="join_merchant_label_name">Name</string>
+    <string name="join_merchant_label_name_placeholder">Please input your name</string>
+    <string name="join_merchant_label_phone">Phone Number</string>
+    <string name="join_merchant_label_phone_placeholder">Please input your phone number</string>
+    <string name="join_merchant_button_text">Generate QR Code</string>
+
+    <string name="my_qr_code_title1">My Code</string>
+    <string name="my_qr_code_description1">Please contact the merchant to scan the code
+        and join the merchant family.</string>
+    <string name="my_qr_code_valid_time">Valid Time</string>
+    <string name="my_qr_code_second" translatable="false">s</string>
+    <string name="my_qr_code_save_qr_button_text">Save QR Code</string>
+    <string name="my_qr_code_saved_successfully">QR code saved successfully!</string>
+
+    <string name="security_setting_title1">Security Setting</string>
+    <string name="security_setting_description1">Please enter a 4-digit security code</string>
+    <string name="security_setting_description2">Please enter old security password</string>
+    <string name="security_setting_description3">Please enter new security password</string>
+
+
+    <string name="message_list_row_title">Received a transfer</string>
+    <!--<string name="voice_message_template">Dear user: you have received a transfer. Sender name: %1$s, transfer amount: %2$s</string>-->
+    <string name="voice_message_template">Huione Pay received successfully,the amount received is: %1$s</string>
+    <string name="voice_message_alipay">Alipay received successfully, the amount received is：%1$s</string>
+
+
+    <!--Error Message Strings-->
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_phone">Country code required.\n
+        Format: +855-24123142</string>
+    <string name="error_failed">Failed</string>
+    <string name="error_saving_failed">Saving Failed</string>
+    <string name="error_qr_generation_failed">QR code generation is failed</string>
+    <string name="error_qr_code_save_failed">Storing QR Code is failed.</string>
+    <string name="error_failure_wrong_format">Invalid Response</string>
+    <string name="error_failure_error">Please check your network connection and internet permission.</string>
+
+</resources>

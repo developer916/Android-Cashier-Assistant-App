@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">收银小助手</string>
+    <string name="cash_assist_title2">下拉刷新</string>
+    <string name="left_join_merchant">加入商家</string>
+    <string name="left_security_setting">安全设置</string>
+    <string name="left_security_login">登录</string>
+    <string name="default_user_name">嗨...</string>
+    <string name="tab_all">所有消息</string>
+    <string name="tab_new">新消息</string>
+    <string name="tab_read">已读消息</string>
+    <string name="no_message">暂无消息</string>
+    <string name="join_merchant_title1">加入商家</string>
+    <string name="join_merchant_label_name">姓名</string>
+    <string name="join_merchant_label_name_placeholder">请输入您的姓名</string>
+    <string name="join_merchant_label_phone">电话号码</string>
+    <string name="join_merchant_label_phone_placeholder">请输入您的电话号码</string>
+    <string name="join_merchant_button_text">生成二维码</string>
+    <string name="my_qr_code_title1">我的二维码</string>
+    <string name="my_qr_code_description1">请联系商家扫码加为店员</string>
+    <string name="my_qr_code_valid_time">有效时间</string>
+    <string name="my_qr_code_save_qr_button_text">保存二维码</string>
+    <string name="my_qr_code_saved_successfully">二维码保存成功！</string>
+    <string name="security_setting_title1">安全设置</string>
+    <string name="security_setting_description1">请输入一个4位数的安全码</string>
+    <string name="security_setting_description2">请输入旧的安全密码</string>
+    <string name="security_setting_description3">请输入新的安全密码</string>
+
+    <string name="message_list_row_title">收到一笔转账</string>
+    <!--<string name="voice_message_template">尊敬的用户：您收到一笔转账。转账人：%1$s，转账金额：%2$s</string>-->
+    <string name="voice_message_template">汇旺支付收款成功，收款金额：%1$s</string>
+    <string name="voice_message_alipay">支付宝收款成功，收款金额：%1$s</string>
+
+    <!--错误消息字符串-->
+    <string name="error_field_required">此字段是必需的</string>
+    <string name="error_invalid_phone">需要国家/地区代码。\n
+        例如：+855-24123142</string>
+    <string name="error_failed">失败</string>
+    <string name="error_saving_failed">保存失败</string>
+    <string name="error_qr_generation_failed">二维码生成失败</string>
+    <string name="error_qr_code_save_failed">存储二维码码失败。</string>
+    <string name="error_failure_wrong_format">无效响应</string>
+    <string name="error_failure_error">请检查您的网络连接或小助手的互联网访问权限</string>
+</resources>

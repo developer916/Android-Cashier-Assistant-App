@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite1">
+
+    <FrameLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg1" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorTransparent"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageButton
+                android:id="@+id/collapse_menu_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="24dp"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/icon_menu"
+                android:tint="@color/colorBlue1" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <TextView
+                style="@style/font_bold1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/colorBlue1" />
+
+            <TextView
+                style="@style/font_regular4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="8dp"
+                android:visibility="gone"
+                android:text="@string/cash_assist_title2"
+                android:textColor="@color/colorBlue1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/tab_layout_border"
+                android:textAllCaps="false"
+                app:tabGravity="center"
+                app:tabIndicatorColor="@color/colorBlue2"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="2dp"
+                app:tabPaddingEnd="20dp"
+                app:tabPaddingStart="20dp"
+                app:tabRippleColor="#818181"
+                app:tabSelectedTextColor="@color/colorBlue1"
+                app:tabTextColor="@color/colorBlue2">
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_all" />
+
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_new" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_read" />
+            </android.support.design.widget.TabLayout>
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:background="@color/colorWhite2" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_panel_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.jaychang.srv.SimpleRecyclerView
+                    android:id="@+id/all_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srv_dividerColor="@color/colorWhite2"
+                    app:srv_dividerOrientation="vertical"
+                    app:srv_emptyStateView="@layout/view_empty_state"
+                    app:srv_layoutMode="linearVertical"
+                    app:srv_loadMoreView="@layout/widget_list_loading"
+                    app:srv_showDivider="true"
+                    app:srv_showEmptyStateView="true"
+                    app:srv_showLastDivider="false" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_panel_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.jaychang.srv.SimpleRecyclerView
+                android:id="@+id/new_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srv_dividerColor="@color/colorWhite2"
+                app:srv_dividerOrientation="vertical"
+                app:srv_emptyStateView="@layout/view_empty_state"
+                app:srv_layoutMode="linearVertical"
+                app:srv_loadMoreView="@layout/widget_list_loading"
+                app:srv_showDivider="true"
+                app:srv_showEmptyStateView="true"
+
+                app:srv_showLastDivider="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_panel_read"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.jaychang.srv.SimpleRecyclerView
+                android:id="@+id/read_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srv_dividerColor="@color/colorWhite2"
+                app:srv_dividerOrientation="vertical"
+                app:srv_emptyStateView="@layout/view_empty_state"
+                app:srv_layoutMode="linearVertical"
+                app:srv_loadMoreView="@layout/widget_list_loading"
+                app:srv_showDivider="true"
+                app:srv_showEmptyStateView="true"
+                app:srv_showLastDivider="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_panel_no_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/join_merchant_button"
+                style="@style/font_regular3"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/colorBlue1"
+                android:text="@string/left_join_merchant"
+                android:textColor="@color/colorWhite1" />
+
+        </LinearLayout>
+        <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
+    </LinearLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/left_navigation"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/left_menu_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/left_nav_user_name"
+                style="@style/font_regular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="56dp"
+                android:paddingLeft="8dp"
+                android:text="@string/default_user_name"
+                android:textColor="@color/colorWhite1" />
+
+            <TextView
+                android:id="@+id/left_nav_join_merchant"
+                style="@style/font_regular2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:drawableStart="@drawable/icon_join"
+                android:drawableLeft="@drawable/icon_join"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorWhite1"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"
+                android:text="@string/left_join_merchant"
+                android:textColor="@color/colorWhite1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/colorBlue2" />
+
+            <TextView
+                android:id="@+id/left_nav_security_setting"
+                style="@style/font_regular2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/icon_lock"
+                android:drawableLeft="@drawable/icon_lock"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/colorWhite1"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"
+                android:text="@string/left_security_setting"
+                android:textColor="@color/colorWhite1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/colorBlue2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="@string/left_footer"
+                android:textColor="@color/colorWhite1" />
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">收銀小助手</string>
+    <string name="cash_assist_title2">下拉刷新</string>
+    <string name="left_join_merchant">加入商家</string>
+    <string name="left_security_setting">安全設置</string>
+    <string name="left_security_login">登錄</string>
+    <string name="default_user_name">嗨......</string>
+    <string name="tab_all">全部</string>
+    <string name="tab_new">新消息</string>
+    <string name="tab_read">已讀消息</string>
+    <string name="no_message">暫無消息</string>
+    <string name="join_merchant_title1">加入商家</string>
+    <string name="join_merchant_label_name">姓名</string>
+    <string name="join_merchant_label_name_placeholder">請輸入您的姓名</string>
+    <string name="join_merchant_label_phone">電話號碼</string>
+    <string name="join_merchant_label_phone_placeholder">請輸入您的電話號碼</string>
+    <string name="join_merchant_button_text">生成二維碼</string>
+    <string name="my_qr_code_title1">我的二維碼</string>
+    <string name="my_qr_code_description1">請聯繫商家掃碼加為店員</string>
+    <string name="my_qr_code_valid_time">有效時間</string>
+    <string name="my_qr_code_save_qr_button_text">保存二維碼</string>
+    <string name="my_qr_code_saved_successfully">二維碼保存成功！</string>
+    <string name="security_setting_title1">安全設置</string>
+    <string name="security_setting_description1">請輸入一個4位數的安全碼</string>
+    <string name="security_setting_description2">請輸入舊的安全密碼</string>
+    <string name="security_setting_description3">請輸入新的安全密碼</string>
+
+    <string name="message_list_row_title">收到一筆轉賬</string>
+    <!--<string name="voice_message_template">尊敬的用戶：您收到一筆轉賬。轉賬人：%1$s，轉賬金額：%2$s</string>-->
+    <string name="voice_message_template">匯旺支付收款成功，收款金額：%1$s</string>
+    <string name="voice_message_alipay">支付寶收款成功，收款金額：%1$s</string>
+
+    <!--错误消息字符串-->
+    <string name="error_field_required">此字段是必需的</string>
+    <string name="error_invalid_phone">需要國家/地區代碼\n
+        例如：+855-24123142</string>
+    <string name="error_failed">失敗</string>
+    <string name="error_saving_failed">保存失敗</string>
+    <string name="error_qr_generation_failed">二維碼生成失敗</string>
+    <string name="error_qr_code_save_failed">存儲二維碼失敗</string>
+    <string name="error_failure_wrong_format">無效響應</string>
+    <string name="error_failure_error">請檢查您的網絡連接和互聯網權限</string>
+</resources>

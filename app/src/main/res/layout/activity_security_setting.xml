@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@color/colorTransparent"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/icon_left_arrow"
+                android:tint="@color/colorBlue1" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/font_regular3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/security_setting_title1"
+                android:textColor="@color/colorBlue1" />
+        </android.support.v7.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/font_regular4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/security_setting_description1"
+                android:textColor="@color/colorBlue2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <com.goldenpie.devs.pincodeview.PinCodeView
+                    android:id="@+id/pin_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:pcv_pin_error_color="@color/colorRed1"
+                    app:pcv_pin_inner_alpha="0"
+                    app:pcv_pin_inner_color="@color/colorBlue1"
+                    app:pcv_pin_inner_drawable="@drawable/icon_pin_filled"
+                    app:pcv_pin_length="4"
+                    app:pcv_pin_outer_color="@color/colorBlue1"
+                    app:pcv_pin_outer_drawable="@drawable/icon_pin_empty"
+                    app:pcv_pin_tint_inner="true"
+                    app:pcv_pin_tint_outer="true"
+                    app:pcv_pin_type="enter_pin" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/widget_loading" />
+</RelativeLayout>
